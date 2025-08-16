@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
+        crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
     <title>Webstudio</title>
 </head>
@@ -23,11 +25,6 @@
         <div class="container header-container">
             <nav class="nav-link">
                 <a href="./index.html" class="logo">Web<span class="span-logo">Studio</span></a>
-                <button class="header-menu-btn" type="button" data-menu-open>
-                    <svg class="" width="24" height="24">
-                        <use href="./images/icons.svg#icon-menu"></use>
-                    </svg>
-                </button>
                 <ul class="nav-list">
                     <li class="nav-list-item">
                         <a href="./index.html" class="link current">Studio</a>
@@ -40,6 +37,11 @@
                     </li>
                 </ul>
             </nav>
+            <button class="header-menu-btn" type="button" data-menu-open>
+                <svg class="" width="24" height="24">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
             <address class="contasts">
                 <ul class="header-list">
                     <li class="header-list-item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
@@ -343,7 +345,6 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-img-container">
-                            <div class="portfolio-img-container">
                             <picture>
                                 <source media="(min-width: 1158px)"
                                 srcset="./images/our-portfolio/portfolio-desc-2-min.jpg 1x,
@@ -593,7 +594,7 @@
                                 <use href="./images/icons.svg#icon-mark"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the <a class="privacy-link" href="">Privacy Policy</a>
+                        <span>I accept the terms and conditions of the <a class="privacy-link" href="">Privacy Policy</a></span>
                     </label>
                 </div>
 
@@ -602,70 +603,73 @@
         </div>
     </div>
 
-    <div class="header-menu" data-menu>
-        <button class="menu-clese-btn" type="button" data-menu-close>
-            <svg class="menu-icon-close" width="8" height="8">
-                <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-        <nav class="menu-nav">
-            <ul class="menu-list">
-                <li class="menu-item">
-                    <a class="menu-link current-menu" href="./index.html">Studio</a>
+    <div class="mobile-menu" data-menu>
+        <div class="container header-menu">
+            <button class="menu-clese-btn" type="button" data-menu-close>
+                <svg class="menu-icon-close" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <nav class="menu-nav">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a class="menu-link current-menu" href="./index.html">Studio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="menu-contasts">
+                <ul class="menu-contasts-list">
+                    <li class="menu-contasts-item">
+                        <a href="tel:+110001111111" class="menu-contasts-link tel ">+11 (000) 111-11-11</a>
+                    </li>
+                    <li class="menu-contasts-item">
+                        <a href="mailto:info@devstudio.com" class="menu-contasts-link">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </address>
+            <ul class="menu-social-list">
+                <li class="menu-social-item">
+                    <a class="memu-social-link" href="">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
                 </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">Portfolio</a>
+            
+                <li class="menu-social-item">
+                    <a class="memu-social-link" href="">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
                 </li>
-                <li class="menu-item">
-                    <a href="" class="menu-link">Contacts</a>
+            
+                <li class="menu-social-item">
+                    <a class="memu-social-link" href="">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            
+                <li class="menu-social-item">
+                    <a class="memu-social-link" href="">
+                        <svg class="menu-social-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
-        </nav>
-        <address class="menu-contasts">
-            <ul class="menu-contasts-list">
-                <li class="menu-contasts-item">
-                    <a href="tel:+110001111111" class="menu-contasts-link">+11 (000) 111-11-11</a>
-                </li>
-                <li class="menu-contasts-item">
-                    <a href="mailto:info@devstudio.com" class="menu-contasts-link">info@devstudio.com</a>
-                </li>
-            </ul>
-        </address>
-        <ul class="menu-social-list">
-            <li class="menu-social-item">
-                <a class="memu-social-link" href="">
-                    <svg class="menu-social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                </a>
-            </li>
-        
-            <li class="menu-social-item">
-                <a class="memu-social-link" href="">
-                    <svg class="menu-social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                </a>
-            </li>
-        
-            <li class="menu-social-item">
-                <a class="memu-social-link" href="">
-                    <svg class="menu-social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                </a>
-            </li>
-        
-            <li class="menu-social-item">
-                <a class="memu-social-link" href="">
-                    <svg class="menu-social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
+        </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

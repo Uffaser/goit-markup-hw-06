@@ -82,8 +82,8 @@ img {
 
 .nav-link {
     display: flex;
-    margin-right: 121px;
     align-items: center;
+    margin-right: auto;
 }
 
 
@@ -97,7 +97,6 @@ img {
     text-transform: uppercase;
     color: #4D5AE5;
     padding: 16px 0;
-    margin-right: 133px;
 }
 
 .span-logo {
@@ -190,6 +189,7 @@ img {
 
 
 .hero {
+    max-width: 320px;
     background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero/heo-background-mob.jpg);
@@ -199,7 +199,6 @@ img {
     color: #ffffff;
     background-color: #2E2F42;
     text-align: center;
-    max-width: 100%;
     margin: 0 auto;
     padding: 72px 0;
 }
@@ -213,13 +212,13 @@ img {
 }
 
 .title {
-    font-size: 56px;
     font-weight: 700;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     margin: 0 auto;
     margin-bottom: 72px;
-    max-width: 496px;
+    max-width: 216px;
 
 }
 
@@ -479,6 +478,7 @@ img {
     display: flex;
     padding: 0;
     margin: 0 auto;
+    width: 116px;
 }
 
 .footer-span-logo {
@@ -541,7 +541,7 @@ img {
     color: #fff;
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     font-size: 12px;
@@ -621,7 +621,7 @@ img {
     width: 288px;
     min-height: 584px;
     border-radius: 4px;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -760,6 +760,7 @@ img {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -778,6 +779,8 @@ img {
 
 
 .label-checkbox {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -816,29 +819,29 @@ img {
 /* menu */
 
 
-.header-menu.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-}
-
-.header-menu {
+.mobile-menu {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: translateX(100%);
     background-color: #fff;
     width: 100%;
     height: 100%;
-    padding: 0 16px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu:not(.is-open) {
-    transform: translate(-50%, 100%);
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 320px;
+    height: 100%;
+    padding-top: 72px;
+    padding-bottom: 40px;
 }
 
 .menu-clese-btn {
@@ -872,9 +875,8 @@ img {
     fill: #fff;
 }
 
-.menu-list {
-    margin-top: 72px;
-    margin-bottom: 164px;
+.menu-nav {
+    margin-bottom: auto;
 }
 
 .menu-item {
@@ -898,13 +900,20 @@ img {
     color: #404bbf;
 }
 
-.menu-contasts-list:last-child {
+.menu-contasts {
     margin-bottom: 48px;
+}
+
+.menu-contasts-item {
+    margin-bottom: 24px;
+}
+
+.menu-contasts-item:last-child {
+    margin-bottom: 0;
 }
 
 .menu-contasts-link {
     display: block;
-    margin-bottom: 24px;
     font-weight: 500;
     font-size: 20px;
     font-style: normal;
@@ -912,6 +921,10 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tel {
+    color: #404bbf;
 }
 
 .menu-social-list {
@@ -973,6 +986,7 @@ img {
     /* hero */
 
     .hero {
+        max-width: 768px;
         background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero-background-tab.jpg);
@@ -989,10 +1003,19 @@ img {
 
     .title {
         margin-bottom: 36px;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        max-width: 496px;
     }
 
     /* benefits */
 
+    .benefits-list-title {
+        text-align: start;
+    }
+    
     .benefits-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1042,6 +1065,10 @@ img {
         padding: 0 108px;
     }
 
+    .footer-link {
+        margin: 0;
+    }
+
     .social-container {
         margin: 0;
     }
@@ -1062,16 +1089,26 @@ img {
         flex-direction: row;
     }
 
+    .subscribe-input {
+        max-width: 264px;
+    }
+
     /* modal-overlay */
 
     .modal {
         width: 408px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .mobile-menu {
+        display: none;
     }
 }
 
 
 
-@media screen and (min-width: 1270px) {
+@media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
         padding: 0 15px;
@@ -1081,10 +1118,6 @@ img {
 
     .logo {
         margin-right: 76px;
-    }
-
-    .nav-link {
-        margin-right: 332px;
     }
 
     .header-list-item .link {
@@ -1102,6 +1135,7 @@ img {
     /* hero */
 
     .hero {
+        max-width: 1440px;
         background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/heo-background-desc.jpg);
@@ -1152,7 +1186,7 @@ img {
     /* team */
 
     .team {
-        padding: 120px;
+        padding: 120px 0;
     }
 
     .team-card {
@@ -1189,6 +1223,10 @@ img {
 
     .social-container {
         margin-right: 80px;
+    }
+
+    .mobile-menu {
+        display: none;
     }
 }
 
